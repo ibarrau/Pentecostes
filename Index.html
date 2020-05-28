@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+			.asd {
+			  width: 96%;
+			  padding: 50px 0;
+			  text-align: center;
+			  background-color: lightblue;
+			  margin-top: 20px;
+			  background-color: #ffffff;
+			  border: 1px solid black;
+			  opacity: 0.6;
+			  filter: alpha(opacity=60); /* For IE8 and earlier */
+			}
+</style>
+</head>
+<body style="width: 100%; text-align:center; background-image:url('paloma2.jpg'); background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;" >
+
+<h1 class="asd">Click aqui para saber que Don del Espiritu Santo te invitamos a rezar:</h1>
+
+<button onclick="myFunction()">A rezar!</button>
+
+<div style="font-size:24px; display:none;" id="myDIV" class="asd">
+</div>
+
+
+<script>
+function myFunction() {
+
+	const months = [
+		"Inteligencia: Se trata de ver a Dios en tu día. Reconocer su rostro en lo que te rodea y transcurre.", 
+		"Consejo: Discernir la voluntad de Dios. Encontrar lo que Él quiere para mi para poder pensar como Él y actual como Él.", 
+		"Ciencia: Ver las cosas como Dios las ve, con sus ojos.", 
+		"Temor de Dios: Asumir pobreza delante de Él. No es temerle por daño sino como un niño teme a separarse de su papá. Sentir seguridad con Él.", 
+		"Piedad: Reconocerse hijo de Dios y acogido en su casa.", 
+		"Fortaleza: La respuesta de Dios a la debilidad del ser humano. Nos hace capaces de lo que sentimos humanamente imposible fiados en su amor.",
+		"Sabiduría: Viene de saborear. Podes saber mucha teología, pero saber y sabiduría de Dios se experimenta. Engloba a los dones. El más sabio es quien saboreó los dones y aún lo hace.", 
+		];
+	const randomMonth = months[Math.floor(Math.random() * months.length)];
+	document.getElementById("myDIV").textContent=randomMonth;
+
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
